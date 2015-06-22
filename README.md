@@ -3,6 +3,9 @@ Java Logitech API Wrapper
 
 JLAW is a wrapper for the four Logitech SDKs (Logitech ArxControl SDK, Logitech Gkey SDK, Logitech LCD SDK and Logitech LED SDK) for Java. It provides four classes plus one utility class which provides as direct as possible access to the SDKs, with some adjustments. JLAW uses Logitech Gaming Software (LGS).
 
+## Download
+See the [releases](https://github.com/HON95/JLAW/releases) page.
+
 ## Usage
 ### Getting JLAW
 The library consists of a Java front-end and a JNI/C++ back-end. Both of the components can be build from source or downloaded as pre-built binaries, in any of the four combinations. If you're using Maven for your project, you should download and install the front-end source and use it as a Maven dependency. The back-end binaries are easiest to just download pre-built.
