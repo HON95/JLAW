@@ -1,0 +1,30 @@
+# Root folders
+bin/
+lib/
+
+## Visual Studio back
+JLAW\ back/[Dd]ebug
+JLAW\ back/[Rr]elease
+JLAW\ back/x64
+JLAW\ back/JLAW\ back/[Dd]ebug
+JLAW\ back/JLAW\ back/[Rr]elease
+JLAW\ back/JLAW\ back/x64
+
+*.suo
+*.user
+*.obj
+*.opensdf
+*.sdf
+
+## Eclipse front
+JLAW\ front/target
+JLAW\ front/.settings
+JLAW\ front/.classpath
+JLAW\ front/.project
+
+## Eclipse test
+JLAW\ test/target
+JLAW\ test/src/main/resources/natives/*
+JLAW\ test/.settings
+JLAW\ test/.classpath
+JLAW\ test/.project
