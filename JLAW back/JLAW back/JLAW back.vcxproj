@@ -24,10 +24,6 @@
     <ClInclude Include="JlawGkey.h" />
     <ClInclude Include="JlawLcd.h" />
     <ClInclude Include="JlawLed.h" />
-    <ClInclude Include="LogitechGArxControlLib.h" />
-    <ClInclude Include="LogitechGkeyLib.h" />
-    <ClInclude Include="LogitechLCDLib.h" />
-    <ClInclude Include="LogitechLEDLib.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="JlawArxControl.cpp" />
@@ -86,23 +82,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>F:\Workspace\workspace_mixed\JLAW\lib\Logitech LCD SDK\Lib\x86;F:\Workspace\workspace_mixed\JLAW\lib\Logitech Gkey SDK\Lib\x86;F:\Workspace\workspace_mixed\JLAW\lib\Logitech LED SDK\Lib\x86;F:\Workspace\workspace_mixed\JLAW\lib\Logitech ArxControl SDK\Lib\x86;$(LibraryPath)</LibraryPath>
-    <IncludePath>F:\Workspace\workspace_mixed\JLAW\lib\JNI;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\lib\Logitech ArxControl SDK\Lib\x86;..\..\lib\Logitech Gkey SDK\Lib\x86;..\..\lib\Logitech LCD SDK\Lib\x86;..\..\lib\Logitech LED SDK\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>F:\Workspace\workspace_mixed\JLAW\lib\Logitech LCD SDK\Lib\x64;F:\Workspace\workspace_mixed\JLAW\lib\Logitech Gkey SDK\Lib\x64;F:\Workspace\workspace_mixed\JLAW\lib\Logitech LED SDK\Lib\x64;F:\Workspace\workspace_mixed\JLAW\lib\Logitech ArxControl SDK\Lib\x64;$(LibraryPath)</LibraryPath>
-    <IncludePath>F:\Workspace\workspace_mixed\JLAW\lib\JNI;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\lib\Logitech ArxControl SDK\Lib\x64;..\..\lib\Logitech Gkey SDK\Lib\x64;..\..\lib\Logitech LCD SDK\Lib\x64;..\..\lib\Logitech LED SDK\Lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>F:\Workspace\workspace_mixed\JLAW\lib\Logitech LCD SDK\Lib\x86;F:\Workspace\workspace_mixed\JLAW\lib\Logitech Gkey SDK\Lib\x86;F:\Workspace\workspace_mixed\JLAW\lib\Logitech LED SDK\Lib\x86;F:\Workspace\workspace_mixed\JLAW\lib\Logitech ArxControl SDK\Lib\x86;$(LibraryPath)</LibraryPath>
-    <IncludePath>F:\Workspace\workspace_mixed\JLAW\lib\JNI;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\lib\Logitech ArxControl SDK\Lib\x86;..\..\lib\Logitech Gkey SDK\Lib\x86;..\..\lib\Logitech LCD SDK\Lib\x86;..\..\lib\Logitech LED SDK\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>F:\Workspace\workspace_mixed\JLAW\lib\Logitech LCD SDK\Lib\x64;F:\Workspace\workspace_mixed\JLAW\lib\Logitech Gkey SDK\Lib\x64;F:\Workspace\workspace_mixed\JLAW\lib\Logitech LED SDK\Lib\x64;F:\Workspace\workspace_mixed\JLAW\lib\Logitech ArxControl SDK\Lib\x64;$(LibraryPath)</LibraryPath>
-    <IncludePath>F:\Workspace\workspace_mixed\JLAW\lib\JNI;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\lib\Logitech ArxControl SDK\Lib\x64;..\..\lib\Logitech Gkey SDK\Lib\x64;..\..\lib\Logitech LCD SDK\Lib\x64;..\..\lib\Logitech LED SDK\Lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -112,11 +104,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;JLAWBACK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\lib\JNI;..\..\lib\Logitech ArxControl SDK\Include;..\..\lib\Logitech Gkey SDK\Include;..\..\lib\Logitech LCD SDK\Include;..\..\lib\Logitech LED SDK\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>LogitechLCDLib.lib;LogitechGkeyLib.lib;LogitechLEDLib.lib;LogitechGArxControlLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LogitechGArxControlLib.lib;LogitechGkeyLib.lib;LogitechLCDLib.lib;LogitechLEDLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -127,11 +120,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;JLAWBACK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\lib\JNI;..\..\lib\Logitech ArxControl SDK\Include;..\..\lib\Logitech Gkey SDK\Include;..\..\lib\Logitech LCD SDK\Include;..\..\lib\Logitech LED SDK\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>LogitechLCDLib.lib;LogitechGkeyLib.lib;LogitechLEDLib.lib;LogitechGArxControlLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LogitechGArxControlLib.lib;LogitechGkeyLib.lib;LogitechLCDLib.lib;LogitechLEDLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -144,13 +138,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;JLAWBACK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\lib\JNI;..\..\lib\Logitech ArxControl SDK\Include;..\..\lib\Logitech Gkey SDK\Include;..\..\lib\Logitech LCD SDK\Include;..\..\lib\Logitech LED SDK\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>LogitechLCDLib.lib;LogitechGkeyLib.lib;LogitechLEDLib.lib;LogitechGArxControlLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LogitechGArxControlLib.lib;LogitechGkeyLib.lib;LogitechLCDLib.lib;LogitechLEDLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -163,13 +158,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;JLAWBACK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\lib\JNI;..\..\lib\Logitech ArxControl SDK\Include;..\..\lib\Logitech Gkey SDK\Include;..\..\lib\Logitech LCD SDK\Include;..\..\lib\Logitech LED SDK\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>LogitechLCDLib.lib;LogitechGkeyLib.lib;LogitechLEDLib.lib;LogitechGArxControlLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LogitechGArxControlLib.lib;LogitechGkeyLib.lib;LogitechLCDLib.lib;LogitechLEDLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

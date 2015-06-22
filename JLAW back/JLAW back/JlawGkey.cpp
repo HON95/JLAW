@@ -2,9 +2,9 @@
 
 #include <jni.h>
 #include <string>
+#include <LogitechGkeyLib.h>
 #include "JlawUtil.h"
 #include "JlawGkey.h"
-#include "LogitechGkeyLib.h"
 
 namespace jlaw_gkey {
 	const char *callbackMethodName = "call";

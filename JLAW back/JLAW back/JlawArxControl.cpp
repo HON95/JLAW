@@ -2,9 +2,9 @@
 
 #include <jni.h>
 #include <string>
+#include <LogitechGArxControlLib.h>
 #include "JlawUtil.h"
 #include "JlawArxControl.h"
-#include "LogitechGArxControlLib.h"
 
 namespace jlaw_arx_control {
 	const char *callbackMethodName = "call";

@@ -2,9 +2,9 @@
 
 #include <jni.h>
 #include <string>
+#include <LogitechLCDLib.h>
 #include "JlawUtil.h"
 #include "JlawLcd.h"
-#include "LogitechLCDLib.h"
 
 
 // logiLcdInit //

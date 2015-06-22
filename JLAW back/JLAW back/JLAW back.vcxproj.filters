@@ -27,18 +27,6 @@
     <ClInclude Include="JlawLed.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LogitechGArxControlLib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LogitechGkeyLib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LogitechLCDLib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LogitechLEDLib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="JlawUtil.h">
       <Filter>Header Files</Filter>
     </ClInclude>

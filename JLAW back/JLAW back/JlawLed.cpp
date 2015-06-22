@@ -2,9 +2,9 @@
 
 #include <jni.h>
 #include <string>
+#include <LogitechLEDLib.h>
 #include "JlawUtil.h"
 #include "JlawLed.h"
-#include "LogitechLEDLib.h"
 
 // logiLedInit //
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawLed_nLogiLedInit
