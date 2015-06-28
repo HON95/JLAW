@@ -11,12 +11,6 @@ import ninja.hon95.jlaw.JlawUtil;
 
 public final class Main {
 
-	/*
-	 * ERRORS
-	 * Wont package
-	 * Runs wrongly as exe
-	 */
-
 	public static final String NATIVE_FOLDER_PATH = "/natives/";
 	public static final String WINDOW_ICON_PATHS[] = {
 			"/icons/application_16.png", "/icons/application_32.png",
