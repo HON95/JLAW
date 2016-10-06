@@ -43,7 +43,7 @@ Questions related to the Logitech SDKs and usage of them:
 > Read through the Logitech SDK documents found in the downloaded SDKs. Ask Logitech if you're still confused.
 
 Other issues?
-> [Create an issue](https://github.com/HON95/JLAW/issues/new).
+> [Submit an issue](https://github.com/HON95/JLAW/issues/new).
 
 ## Legal
 JLAW is licensed under the [MIT License](http://choosealicense.com/licenses/mit/).
