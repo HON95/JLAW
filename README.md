@@ -34,13 +34,16 @@ First you need to add the front-end as a dependency and load the native back-end
 
 ## FAQ
 Why does LGS use the Java icon for my applet or profile?
-> I don't know. Maybe invoking the Java VM from another program (C++ and JNI, for example) will do the trick.
+> I'm not sure. Maybe invoking the Java VM from another program (C++ and JNI, for example) will do the trick.
 
 How do I remove all the messy LCD applets in LGSs applet list?
 > You have to edit the LGS settings file. Close LGS first. Open the JSON file "~\AppData\Local\Logitech\Logitech Gaming Software\settings.json" and remove the applets you want gone from the lcd/applets section. Try not to break the syntax, obviously. Make a backup to be sure you don't need to reconfigure LGS if you mess up.
 
 Questions related to the Logitech SDKs and usage of them:
 > Read through the Logitech SDK documents found in the downloaded SDKs. Ask Logitech if you're still confused.
+
+Other issues?
+> [Create an issue](https://github.com/HON95/JLAW/issues/new).
 
 ## Legal
 JLAW is licensed under the [MIT License](http://choosealicense.com/licenses/mit/).
