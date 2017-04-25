@@ -32,7 +32,11 @@ namespace jlaw_gkey {
 
 using namespace jlaw_gkey;
 
-// logiGkeyInit //
+/*
+* Class:     ninja_hon95_jlaw_JlawGkey
+* Method:    nLogiGkeyInit
+* Signature: (Lninja/hon95/jlaw/JlawGkey/JlawGkeyCallback;)Z
+*/
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawGkey_nLogiGkeyInit
 (JNIEnv *env, jclass clazz, jobject callback) {
 	if (storedJvm == NULL)
@@ -45,19 +49,31 @@ JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawGkey_nLogiGkeyInit
 	return LogiGkeyInitWithoutContext((logiGkeyCB)Callback);
 }
 
-// logiGkeyInitWithoutCallback //
+/*
+* Class:     ninja_hon95_jlaw_JlawGkey
+* Method:    nLogiGkeyInitWithoutCallback
+* Signature: ()Z
+*/
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawGkey_nLogiGkeyInitWithoutCallback
 (JNIEnv *env, jclass clazz) {
 	return LogiGkeyInitWithoutCallback();
 }
 
-// logiGkeyIsMouseButtonPressed //
+/*
+* Class:     ninja_hon95_jlaw_JlawGkey
+* Method:    nLogiGkeyIsMouseButtonPressed
+* Signature: (I)Z
+*/
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawGkey_nLogiGkeyIsMouseButtonPressed
 (JNIEnv *env, jclass clazz, jint buttonNumber) {
 	return LogiGkeyIsMouseButtonPressed(buttonNumber);
 }
 
-// logiGkeyGetMouseButtonString //
+/*
+* Class:     ninja_hon95_jlaw_JlawGkey
+* Method:    nLogiGkeyGetMouseButtonString
+* Signature: (I)Ljava/lang/String;
+*/
 JNIEXPORT jstring JNICALL Java_ninja_hon95_jlaw_JlawGkey_nLogiGkeyGetMouseButtonString
 (JNIEnv *env, jclass clazz, jint buttonNumber) {
 	std::wstring wideString = LogiGkeyGetMouseButtonString(buttonNumber);
@@ -65,13 +81,21 @@ JNIEXPORT jstring JNICALL Java_ninja_hon95_jlaw_JlawGkey_nLogiGkeyGetMouseButton
 	return javaString;
 }
 
-// logiGkeyIsKeyboardGkeyPressed //
+/*
+* Class:     ninja_hon95_jlaw_JlawGkey
+* Method:    nLogiGkeyIsKeyboardGkeyPressed
+* Signature: (II)Z
+*/
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawGkey_nLogiGkeyIsKeyboardGkeyPressed
 (JNIEnv *env, jclass clazz, jint gkeyNumber, jint modeNumber) {
 	return LogiGkeyIsKeyboardGkeyPressed(gkeyNumber, modeNumber);
 }
 
-// logiGkeyGetKeyboardGkeyString //
+/*
+* Class:     ninja_hon95_jlaw_JlawGkey
+* Method:    nLogiGkeyGetKeyboardGkeyString
+* Signature: (II)Ljava/lang/String;
+*/
 JNIEXPORT jstring JNICALL Java_ninja_hon95_jlaw_JlawGkey_nLogiGkeyGetKeyboardGkeyString
 (JNIEnv *env, jclass clazz, jint gkeyNumber, jint modeNumber) {
 	std::wstring wideString = LogiGkeyGetKeyboardGkeyString(gkeyNumber, modeNumber);
@@ -79,7 +103,11 @@ JNIEXPORT jstring JNICALL Java_ninja_hon95_jlaw_JlawGkey_nLogiGkeyGetKeyboardGke
 	return javaString;
 }
 
-// logiGkeyShutdown //
+/*
+* Class:     ninja_hon95_jlaw_JlawGkey
+* Method:    nLogiGkeyShutdown
+* Signature: ()V
+*/
 JNIEXPORT void JNICALL Java_ninja_hon95_jlaw_JlawGkey_nLogiGkeyShutdown
 (JNIEnv *env, jclass clazz) {
 	LogiGkeyShutdown();

@@ -30,6 +30,9 @@
     <ClInclude Include="JlawUtil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="JlawSteeringWheel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="JlawGkey.cpp">
@@ -45,6 +48,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="JlawUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JlawSteeringWheel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

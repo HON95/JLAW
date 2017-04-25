@@ -1,11 +1,12 @@
-#ifndef _JLAW_BACK_UTIL_H
-#define _JLAW_BACK_UTIL_H
+#pragma once
 
 #include <jni.h>
 #include <string>
 
+jstring ToJavaStringFromCharString(const char *charString, JNIEnv *env);
+
+char* ToCharStringFromJavaString(jstring &javaString, JNIEnv *env);
+
 jstring ToJavaStringFromWideString(std::wstring &wideString, JNIEnv *env);
 
 std::wstring ToWideStringFromJavaString(jstring &javaString, JNIEnv *env);
-
-#endif // _JLAW_BACK_UTIL_H

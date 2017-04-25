@@ -23,8 +23,8 @@ extern "C" {
 #define ninja_hon95_jlaw_JlawLed_LOGI_LED_DEVICETYPE_PERKEY_RGB 4L
 #undef ninja_hon95_jlaw_JlawLed_LOGI_LED_DEVICETYPE_ALL
 #define ninja_hon95_jlaw_JlawLed_LOGI_LED_DEVICETYPE_ALL 7L
-#undef ninja_hon95_jlaw_JlawLed_LOGI_LED_DURATION_INFINATE
-#define ninja_hon95_jlaw_JlawLed_LOGI_LED_DURATION_INFINATE 0L
+#undef ninja_hon95_jlaw_JlawLed_LOGI_LED_DURATION_INFINITE
+#define ninja_hon95_jlaw_JlawLed_LOGI_LED_DURATION_INFINITE 0L
 /*
  * Class:     ninja_hon95_jlaw_JlawLed
  * Method:    nLogiLedInit
