@@ -4,7 +4,7 @@
 	<groupId>ninja.hon95.jlaw</groupId>
 	<artifactId>jlaw</artifactId>
 	<packaging>jar</packaging>
-	<version>1.1.0</version>
+	<version>1.0.0</version>
 	<name>JLAW</name>
 	<description>Java Logitech API Wrapper</description>
 	<url>https://github.com/HON95/JLAW</url>
@@ -13,7 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<author>HON95</author>
-		<year>2016</year>
+		<year>2015</year>
 	</properties>
 
 	<!-- Build -->
@@ -27,7 +27,7 @@
 				<filtering>true</filtering>
 				<directory>${basedir}/src/main/resources/</directory>
 				<includes>
-					<include>LICENSE</include>
+					<include>LICENSE.txt</include>
 				</includes>
 			</resource>
 		</resources>
@@ -38,14 +38,6 @@
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.7</version>
-				<configuration>
-					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 		</plugins>

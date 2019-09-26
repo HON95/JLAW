@@ -4,7 +4,7 @@
 	<groupId>ninja.hon95.jlaw</groupId>
 	<artifactId>jlaw-test</artifactId>
 	<packaging>jar</packaging>
-	<version>1.1.0</version>
+	<version>1.0.0</version>
 	<name>JLAW Test</name>
 	<description>A JLAW sample</description>
 	<url>https://github.com/HON95/JLAW</url>
@@ -13,7 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<author>HON95</author>
-		<year>2016</year>
+		<year>2015</year>
 		<mainPackage>ninja.hon95.jlawtest</mainPackage>
 		<mainClass>${mainPackage}.Main</mainClass>
 	</properties>
@@ -29,7 +29,7 @@
 				<filtering>false</filtering>
 				<directory>${basedir}/src/main/resources/</directory>
 				<excludes>
-					<exclude>LICENSE</exclude>
+					<exclude>LICENSE.txt</exclude>
 				</excludes>
 			</resource>
 			<resource>
@@ -37,7 +37,7 @@
 				<filtering>true</filtering>
 				<directory>${basedir}/src/main/resources/</directory>
 				<includes>
-					<include>LICENSE</include>
+					<include>LICENSE.txt</include>
 				</includes>
 			</resource>
 		</resources>
@@ -48,13 +48,6 @@
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.7</version>
-				<configuration>
-					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -142,7 +135,7 @@
 		<dependency>
 			<groupId>ninja.hon95.jlaw</groupId>
 			<artifactId>jlaw</artifactId>
-			<version>1.1.0</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>net.java.dev.designgridlayout</groupId>
@@ -151,3 +144,4 @@
 		</dependency>
 	</dependencies>
 </project>
+

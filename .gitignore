@@ -1,25 +1,8 @@
-# Root folders and files
+# Root folders
 bin/
+lib/
 
-msbuild_location.config
-
-
-## Lib
-lib/JNI
-lib/Logitech\ ArxControl\ SDK
-lib/Logitech\ Gkey\ SDK
-lib/Logitech\ LCD\ SDK
-lib/Logitech\ LED\ SDK
-lib/Logitech\ Steering\ Wheel\ SDK
-
-## Visual Studio
-*.suo
-*.user
-*.obj
-*.opensdf
-*.sdf
-
-## Visual Studio back-end
+## Visual Studio back
 JLAW\ back/[Dd]ebug
 JLAW\ back/[Rr]elease
 JLAW\ back/x64
@@ -27,7 +10,13 @@ JLAW\ back/JLAW\ back/[Dd]ebug
 JLAW\ back/JLAW\ back/[Rr]elease
 JLAW\ back/JLAW\ back/x64
 
-## Eclipse front-end
+*.suo
+*.user
+*.obj
+*.opensdf
+*.sdf
+
+## Eclipse front
 JLAW\ front/target
 JLAW\ front/.settings
 JLAW\ front/.classpath

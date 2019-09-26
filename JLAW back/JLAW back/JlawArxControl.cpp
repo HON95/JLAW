@@ -32,11 +32,7 @@ namespace jlaw_arx_control {
 
 using namespace jlaw_arx_control;
 
-/*
-* Class:     ninja_hon95_jlaw_JlawArxControl
-* Method:    nLogiArxInit
-* Signature: (Ljava/lang/String;Ljava/lang/String;Lninja/hon95/jlaw/JlawArxControl/JlawArxControlCallback;)Z
-*/
+// logiArxInit //
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxInit
 (JNIEnv *env, jclass clazz, jstring identifier, jstring friendlyName, jobject callback){
 	if (storedJvm == NULL)
@@ -55,11 +51,7 @@ JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxInit
 	return LogiArxInit(&wideIdentifier[0], &wideFriendlyName[0], &context);
 }
 
-/*
-* Class:     ninja_hon95_jlaw_JlawArxControl
-* Method:    nLogiArxAddFileAs
-* Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
-*/
+// logiArxAddFileAs //
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxAddFileAs
 (JNIEnv *env, jclass clazz, jstring filePath, jstring fileName, jstring mimeType){
 	std::wstring wideFilePath = ToWideStringFromJavaString(filePath, env);
@@ -68,11 +60,7 @@ JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxAddFileA
 	return LogiArxAddFileAs(&wideFilePath[0], &wideFileName[0], &wideMimeType[0]);
 }
 
-/*
-* Class:     ninja_hon95_jlaw_JlawArxControl
-* Method:    nLogiArxAddContentAs
-* Signature: ([BLjava/lang/String;Ljava/lang/String;)Z
-*/
+// logiArxAddContentAs //
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxAddContentAs
 (JNIEnv *env, jclass clazz, jbyteArray content, jstring fileName, jstring mimeType){
 	std::wstring wideFileName = ToWideStringFromJavaString(fileName, env);
@@ -84,11 +72,7 @@ JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxAddConte
 	return result;
 }
 
-/*
-* Class:     ninja_hon95_jlaw_JlawArxControl
-* Method:    nLogiArxAddUTF8StringAs
-* Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
-*/
+// logiArxAddUTF8StringAs //
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxAddUTF8StringAs
 (JNIEnv *env, jclass clazz, jstring stringContent, jstring fileName, jstring mimeType){
 	std::wstring wideStringContent = ToWideStringFromJavaString(stringContent, env);
@@ -97,36 +81,24 @@ JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxAddUTF8S
 	return LogiArxAddUTF8StringAs(&wideStringContent[0], &wideFileName[0], &wideMimeType[0]);
 }
 
-/*
-* Class:     ninja_hon95_jlaw_JlawArxControl
-* Method:    nLogiArxAddImageFromBitmap
-* Signature: ([BIILjava/lang/String;)Z
-*/
+// logiArxAddImageFromBitmap //
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxAddImageFromBitmap
 (JNIEnv *env, jclass clazz, jbyteArray bitmap, jint width, jint height, jstring fileName){
 	std::wstring wideFileName = ToWideStringFromJavaString(fileName, env);
 	jbyte *byteBitMap = env->GetByteArrayElements(bitmap, NULL);
-	bool result = LogiArxAddImageFromBitmap(reinterpret_cast<unsigned char *>(byteBitMap), width, height, &wideFileName[0]);
+	bool result = LogiArxAddImageFromBitmap(reinterpret_cast<BYTE*>(byteBitMap), width, height, &wideFileName[0]);
 	env->ReleaseByteArrayElements(bitmap, byteBitMap, JNI_ABORT);
 	return result;
 }
 
-/*
-* Class:     ninja_hon95_jlaw_JlawArxControl
-* Method:    nLogiArxSetIndex
-* Signature: (Ljava/lang/String;)Z
-*/
+// logiArxSetIndex //
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxSetIndex
 (JNIEnv *env, jclass clazz, jstring fileName){
 	std::wstring wideFileName = ToWideStringFromJavaString(fileName, env);
 	return LogiArxSetIndex(&wideFileName[0]);
 }
 
-/*
-* Class:     ninja_hon95_jlaw_JlawArxControl
-* Method:    nLogiArxSetTagPropertyById
-* Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
-*/
+// logiArxSetTagPropertyById //
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxSetTagPropertyById
 (JNIEnv *env, jclass clazz, jstring tagId, jstring prop, jstring newValue){
 	std::wstring wideTagId = ToWideStringFromJavaString(tagId, env);
@@ -135,11 +107,7 @@ JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxSetTagPr
 	return LogiArxSetTagPropertyById(&wideTagId[0], &wideProp[0], &wideNewValue[0]);
 }
 
-/*
-* Class:     ninja_hon95_jlaw_JlawArxControl
-* Method:    nLogiArxSetTagsPropertyByClass
-* Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
-*/
+// logiArxSetTagsPropertyByClass //
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxSetTagsPropertyByClass
 (JNIEnv *env, jclass clazz, jstring tagsClass, jstring prop, jstring newValue){
 	std::wstring wideTagsClass = ToWideStringFromJavaString(tagsClass, env);
@@ -148,11 +116,7 @@ JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxSetTagsP
 	return LogiArxSetTagsPropertyByClass(&wideTagsClass[0], &wideProp[0], &wideNewValue[0]);
 }
 
-/*
-* Class:     ninja_hon95_jlaw_JlawArxControl
-* Method:    nLogiArxSetTagContentById
-* Signature: (Ljava/lang/String;Ljava/lang/String;)Z
-*/
+// logiArxSetTagContentById //
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxSetTagContentById
 (JNIEnv *env, jclass clazz, jstring tagId, jstring newContent){
 	std::wstring wideTagId = ToWideStringFromJavaString(tagId, env);
@@ -160,11 +124,7 @@ JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxSetTagCo
 	return LogiArxSetTagContentById(&wideTagId[0], &wideNewContent[0]);
 }
 
-/*
-* Class:     ninja_hon95_jlaw_JlawArxControl
-* Method:    nLogiArxSetTagsContentByClass
-* Signature: (Ljava/lang/String;Ljava/lang/String;)Z
-*/
+// logiArxSetTagsContentByClass //
 JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxSetTagsContentByClass
 (JNIEnv *env, jclass clazz, jstring tagsClass, jstring newContent){
 	std::wstring wideTagsClass = ToWideStringFromJavaString(tagsClass, env);
@@ -172,21 +132,13 @@ JNIEXPORT jboolean JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxSetTagsC
 	return LogiArxSetTagsContentByClass(&wideTagsClass[0], &wideNewContent[0]);
 }
 
-/*
-* Class:     ninja_hon95_jlaw_JlawArxControl
-* Method:    nLogiArxGetLastError
-* Signature: ()I
-*/
+// logiArxGetLastError //
 JNIEXPORT jint JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxGetLastError
 (JNIEnv *env, jclass clazz){
 	return LogiArxGetLastError();
 }
 
-/*
-* Class:     ninja_hon95_jlaw_JlawArxControl
-* Method:    nLogiArxShutdown
-* Signature: ()V
-*/
+// logiArxShutdown //
 JNIEXPORT void JNICALL Java_ninja_hon95_jlaw_JlawArxControl_nLogiArxShutdown
 (JNIEnv *env, jclass clazz){
 	LogiArxShutdown();
